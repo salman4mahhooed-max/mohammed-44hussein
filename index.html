@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohammed Hussein | Technician</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+background:#020617;
+}
+
+/* خلفية متحركة */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#0ea5e9 1px,transparent 1px);
+background-size:40px 40px;
+animation:moveBg 25s linear infinite;
+opacity:.15;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+100%{transform:translate(-200px,-200px);}
+}
+
+.container{
+text-align:center;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+padding:40px 30px;
+border-radius:22px;
+width:360px;
+box-shadow:0 0 50px rgba(0,0,0,.6);
+animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.profile{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #38bdf8;
+margin-bottom:15px;
+transition:.4s;
+}
+
+.profile:hover{
+transform:scale(1.07);
+box-shadow:0 0 20px #38bdf8;
+}
+
+h1{
+font-weight:700;
+}
+
+.role{
+color:#94a3b8;
+margin-bottom:25px;
+}
+
+.links a{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+text-decoration:none;
+color:white;
+background:#111827;
+padding:14px;
+margin:10px 0;
+border-radius:14px;
+transition:.35s;
+font-size:16px;
+}
+
+.links a:hover{
+transform:translateY(-3px);
+box-shadow:0 0 15px rgba(56,189,248,.5);
+background:#1f2937;
+}
+
+.links i{
+font-size:20px;
+cursor:pointer;
+}
+
+.footer{
+margin-top:20px;
+font-size:12px;
+color:#64748b;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="profile.jpg" class="profile">
+
+<h1>Mohammed Hussein</h1>
+<div class="role">Technician</div>
+
+<div class="links">
+
+<a href="https://www.facebook.com/share/1C6TEepga8/?mibextid=wwXIfr" target="_blank">
+<i class="fab fa-facebook"></i> Facebook
+</a>
+
+<a href="https://www.instagram.com/m750z?igsh=MWQ3cnZqdWl4dDFoZA%3D%3D&utm_source=qr" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://wa.me/message/6F5MXZURTQ3KB1" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="https://t.me/m750z" target="_blank">
+<i class="fab fa-telegram"></i> Telegram
+</a>
+
+<a href="tel:+9647706688951">
+<i class="fa-solid fa-phone"></i> Call Me
+</a>
+
+<a onclick="copyNumber()">
+<i class="fa-solid fa-copy"></i> Copy Phone Number
+</a>
+
+</div>
+
+<div class="footer">
+© 2026 Mohammed Hussein
+</div>
+
+</div>
+
+<script>
+function copyNumber(){
+navigator.clipboard.writeText("07706688951");
+alert("Phone number copied ✅");
+}
+</script>
+
+</body>
+</html>
